@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+body {
+  background: #ffffff;
+  height: 100vh;
+}
+
+.App {
+  padding: 24px;
+  position: relative;
+  .pattern {
+    width: 326px;
+    position: absolute;
+    left: 24px;
+  }
+  .pattern-quotes {
+    position: absolute;
+    top: 364px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60px;
+    height: 50px;
+    object-fit: cover;
+  }
+  .pattern-curve{
+    position: fixed;
+    bottom: 0;
+    width: 285px;
+    left: -24px;
+  }
+  .slider {
+    width: 326.5px;
+    top: 54px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    gap: 24px;
+
+    .item-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 32px;
+      img {
+        width: 254px;
+        height: 253px;
+        transition: 0.5s all ease-in-out;
+      }
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        transition: 0.5s all ease-in-out;
+        margin-top: 24px;
+        &-desc {
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 24px;
+          text-align: center;
+          color: #202047;
+          text-align: center;
+          width: 311px;
+        }
+        &-bottom {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 311px;
+          gap: 4px;
+          &-name {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            color: #202047;
+          }
+
+          &-title {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            color: #b9b9ce;
+          }
+        }
+      }
+    }
+  }
+  .control {
+    background: #ffffff;
+    box-shadow: 0px 15px 20px -10px rgba(36, 36, 113, 0.0991313);
+    border-radius: 28px;
+    width: 80px;
+    height: 40px;
+    position: fixed;
+    top: 287px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+    &-click {
+      cursor: pointer;
+    }
+  }
+}
