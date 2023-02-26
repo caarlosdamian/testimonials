@@ -52,7 +52,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <main className="App">
       <img src={PatternBg} alt="patrern" className="pattern" />
       <img src={PatternQuotes} alt="PatternQuotes" className="pattern-quotes" />
       <img src={PatternCurve} alt="PatternCurve" className="pattern-curve" />
@@ -98,7 +98,7 @@ function App() {
           onClick={handleMove}
         />
       </div>
-    </div>
+    </main>
   );
 }
 
