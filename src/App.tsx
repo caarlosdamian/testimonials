@@ -1,6 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.scss";
-import { John, Next, PatternBg, PatternCurve, PatternQuotes, Prev, Tanya } from "./images";
+import {
+  John,
+  Next,
+  PatternBg,
+  PatternCurve,
+  PatternQuotes,
+  Prev,
+  Tanya,
+} from "./images";
 
 function App() {
   const arr = [
@@ -20,14 +28,29 @@ function App() {
     },
   ];
   const [translate, setTranslate] = useState(326.5);
-
+  const [innerWidth, setInnerwidth] = useState(0);
+  console.log(innerWidth);
   const handleMove = () => {
-    if (translate === 326.5) {
+    if (translate !== 0) {
       setTranslate(0);
+    } else if (innerWidth > 1000) {
+      setTranslate(1207);
     } else {
       setTranslate(326.5);
     }
   };
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setInnerwidth(window.innerWidth);
+    });
+    return () => {
+      window.removeEventListener("resize", () => {
+        setInnerwidth(window.innerWidth);
+      });
+    };
+  }, []);
+
   return (
     <div className="App">
       <img src={PatternBg} alt="patrern" className="pattern" />
